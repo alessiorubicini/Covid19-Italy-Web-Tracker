@@ -1,0 +1,878 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../Fonts/Helvetica.ttf');
+}
+
+@font-face {
+    font-family: 'HelveticaBold';
+    src: url('../Fonts/Helvetica-Bold.ttf');
+}
+
+body {
+    font-family: 'Helvetica';
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+    color: black;
+}
+
+h2 {
+    margin-left: 30px;
+}
+
+.title {
+    margin-top: -10px;
+    margin-left: 250px;
+    background-color: rgb(10, 156, 200);
+    width: 1100px;
+    height: 300px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: left;
+    vertical-align: top;
+    background-image: url('../Images/covid_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title p {
+    padding-top: 220px;
+    padding-left: 40px;
+    color: white;
+    font-size: 38px;
+}
+
+
+/*  MENÙ LATERALE SMARTPHONE */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 69, 121);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  width: 230px;
+}
+.sidenav a:hover {
+  scale: 1.07;
+}
+
+.sidenav .closebtn {
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+
+.openNav {
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border: 0px;
+    border-color: white;
+    outline: none;
+}
+
+
+.regione {
+    display: inline-block;
+    width: 300px;
+    height: 320px;
+    background-color: rgb(231, 214, 214);
+    border-radius: 18px;
+    margin-top: 70px;
+    margin-left: 60px;
+}
+.regione h1 {
+    text-align: left;
+    padding-top: 2px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.regione p {
+    margin-top: 20px;
+    margin-left: 40px;
+    padding-bottom: -2px;
+}
+
+
+/*      RESPONSIVE      */
+
+
+/*  Smartphone in verticale  */
+@media only screen and (max-width: 399px) {
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .title {
+        margin-top: 20px;
+        margin-left: 30px;
+        background-color: rgb(10, 156, 200);
+        width: 300px;
+        height: 100px;
+        border-radius: 20px;
+        text-align: left;
+        vertical-align: top;
+        background-image: url('../Images/covid_background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .title p {
+        padding-top: 20px;
+        padding-left: 15px;
+        color: white;
+        font-size: 27px;
+        font-family: 'HelveticaBold';
+    }
+    
+    
+    /*  MENÙ LATERALE SMARTPHONE */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 69, 121);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 40px;
+    }
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+      width: 230px;
+    }
+    .sidenav a:hover {
+      scale: 1.07;
+    }
+    
+    .sidenav .closebtn {
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+    
+    .openNav {
+        position: absolute;
+        top: 130px;
+        left: 30px;
+        font-size: 40px;
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        border: 0px;
+        border-color: white;
+        outline: none;
+    }
+
+    
+    
+    .scheda {
+        width: 120px;
+        height: 220px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: 60px;
+        margin-left: 40px;
+        border: 4px;
+        background-color: rgb(231, 214, 214);
+        border-color: black;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: all 0.3s;
+    }
+    .scheda:hover {
+        scale: 1.1;
+    }
+    .scheda img {
+        width: 75px;
+        height: auto;
+        padding: 10px;
+    }
+
+    
+    .scheda p {
+        font-size: 15px;
+        padding: 2px;
+        padding-bottom: 20px;
+        color: black;
+    }
+    
+    .regioni {
+        display: inline-block;
+        width: 250px;
+        height: 70px;
+        margin-top: 100px;
+        margin-left: 40px;
+        font-family: 'Helvetica';
+        font-size: 22px;
+        border-radius: 14px;
+        border-width: 0px;
+        color: black;
+        background-color: rgb(231, 214, 214);
+        border-color: rgb(231, 214, 214);
+        outline: none;
+        cursor: pointer;
+        background-image: linear-gradient(black, black);
+        background-size: 0 5px, auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transition: all .2s ease-out;
+        
+    }
+    
+    .regioni:hover {
+        background-size: 100% 5px, auto;
+    }
+    
+    .link {
+        margin-left: 50px;
+        width: 800px;
+        height: 80px;
+        padding: 15px;
+        background-color: rgb(0, 69, 121);
+    }
+    .link img {
+        width: 125px;
+        height: auto;
+        padding: 20px;
+    }
+
+
+
+    .link {
+        margin-left: 30px;
+        margin-top: 30px;
+        width: 270px;
+        height: 100px;
+        padding: 15px;
+        background-color: rgb(0, 69, 121);
+        border-radius: 17px;
+        transition: all 0.2s;
+    }
+    .link:hover {
+        scale: 1.06;
+    }
+    .link img {
+        float: left;
+        width: 70px;
+        height: auto;
+        
+    }
+    .link p {
+        padding-left: 10px;
+        float: left;
+        color: white;
+        font-size: 15px;
+    
+    }
+    
+    .info-sito {
+        margin-left: 600px;
+        margin-top: 50px;
+        font-size: 16px;
+        color: black;
+    }
+}
+
+
+/*  Smartphone grandi in verticale  */
+@media only screen and (min-width: 400px) and (max-width: 479px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .title {
+        margin-top: 20px;
+        margin-left: 30px;
+        background-color: rgb(10, 156, 200);
+        width: 300px;
+        height: 100px;
+        border-radius: 20px;
+        text-align: left;
+        vertical-align: top;
+        background-image: url('../Images/covid_background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+
+    
+    .title p {
+        padding-top: 20px;
+        padding-left: 15px;
+        color: white;
+        font-size: 27px;
+        font-family: 'HelveticaBold';
+    }
+    
+    
+    /*  MENÙ LATERALE SMARTPHONE */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 69, 121);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 40px;
+    }
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+      width: 230px;
+    }
+    .sidenav a:hover {
+      scale: 1.07;
+    }
+    
+    .sidenav .closebtn {
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+    
+    .openNav {
+        position: absolute;
+        top: 130px;
+        left: 30px;
+        font-size: 40px;
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        border: 0px;
+        border-color: white;
+        outline: none;
+    }
+
+    .regione {
+        margin-left: 20px;
+    }
+
+    
+    
+    .scheda {
+        width: 120px;
+        height: 220px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: 60px;
+        margin-left: 50px;
+        border: 4px;
+        background-color: rgb(231, 214, 214);
+        border-color: black;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: all 0.3s;
+    }
+    .scheda:hover {
+        scale: 1.1;
+    }
+    .scheda img {
+        width: 75px;
+        height: auto;
+        padding: 10px;
+    }
+
+    
+    .scheda p {
+        font-size: 15px;
+        padding: 2px;
+        padding-bottom: 20px;
+        color: black;
+    }
+    
+    .regioni {
+        display: inline-block;
+        width: 250px;
+        height: 70px;
+        margin-top: 100px;
+        margin-left: 60px;
+        font-family: 'Helvetica';
+        font-size: 22px;
+        border-radius: 14px;
+        border-width: 0px;
+        color: black;
+        background-color: rgb(231, 214, 214);
+        border-color: rgb(231, 214, 214);
+        outline: none;
+        cursor: pointer;
+        background-image: linear-gradient(black, black);
+        background-size: 0 5px, auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transition: all .2s ease-out;
+        
+    }
+    
+    .regioni:hover {
+        background-size: 100% 5px, auto;
+    }
+    
+
+    .link {
+        margin-left: 50px;
+        margin-top: 30px;
+        width: 270px;
+        height: 100px;
+        padding: 15px;
+        background-color: rgb(0, 69, 121);
+        border-radius: 17px;
+        transition: all 0.2s;
+    }
+    .link:hover {
+        scale: 1.06;
+    }
+    .link img {
+        float: left;
+        width: 70px;
+        height: auto;
+        
+    }
+    .link p {
+        padding-left: 10px;
+        float: left;
+        color: white;
+        font-size: 15px;
+    
+    }
+    
+    .info-sito {
+        margin-left: 600px;
+        margin-top: 50px;
+        font-size: 16px;
+        color: black;
+    }
+}
+
+
+
+/*  Tablet in verticale  */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    h1 {
+        font-size: 20px;
+    }
+
+    body {
+        margin: 0px;
+        white-space: nowrap;
+    }
+    
+    .title {
+        margin-top: 20px;
+        margin-left: 30px;
+        background-color: rgb(10, 156, 200);
+        width: 300px;
+        height: 100px;
+        border-radius: 20px;
+        text-align: left;
+        vertical-align: top;
+        background-image: url('../Images/covid_background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .title p {
+        padding-top: 220px;
+        padding-left: 40px;
+        color: white;
+        font-size: 38px;
+        font-family: 'HelveticaBold';
+        outline: none;
+        text-decoration: none;
+    }
+
+    
+    
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(218, 199, 199);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 40px;
+    }
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      color: black;
+      display: block;
+      transition: 0.3s;
+      width: 230px;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+    
+    .openNav {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        font-size: 40px;
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        border: 0px;
+        border-color: white;
+        outline: none;
+    }
+
+    .ultimiDati {
+        margin-left: 300px;
+    }
+
+    .scheda {
+        width: 120px;
+        height: 220px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: 60px;
+        margin-left: 35px;
+        border: 4px;
+        background-color: rgb(231, 214, 214);
+        border-color: black;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: all 0.3s;
+    }
+    .scheda:hover {
+        scale: 1.1;
+    }
+    .scheda img {
+        width: 75px;
+        height: auto;
+        padding: 10px;
+    }
+
+    
+    .scheda p {
+        font-size: 15px;
+        padding: 2px;
+        padding-bottom: 20px;
+        color: black;
+    }
+    
+    .regioni {
+        display: inline-block;
+        width: 350px;
+        height: 100px;
+        margin-top: 100px;
+        margin-left: 360px;
+        font-family: 'Helvetica';
+        font-size: 27px;
+        border-radius: 14px;
+        border-width: 0px;
+        color: black;
+        background-color: rgb(231, 214, 214);
+        border-color: rgb(231, 214, 214);
+        outline: none;
+        cursor: pointer;
+        background-image: linear-gradient(black, black);
+        background-size: 0 5px, auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transition: all .2s ease-out;
+        
+    }
+    
+    .regioni:hover {
+        background-size: 100% 5px, auto;
+    }
+    
+    .fonte-dati {
+        margin-top: 80px;
+        margin-left: 300px;
+    }
+
+
+
+    .link {
+        margin-left: 100px;
+        margin-top: 30px;
+        width: 800px;
+        height: 100px;
+        padding: 15px;
+        background-color: rgb(0, 69, 121);
+        border-radius: 17px;
+        transition: all 0.2s;
+    }
+    .link:hover {
+        scale: 1.06;
+    }
+    .link img {
+        float: left;
+        width: 110px;
+        height: auto;
+        
+    }
+    .link p {
+        padding-left: 20px;
+        float: left;
+        color: white;
+        font-size: 34px;
+    
+    }
+    
+    .info-sito {
+        margin-left: 470px;
+        margin-top: 50px;
+        font-size: 16px;
+        color: black;
+    }
+    
+}
+
+
+
+
+/*  Tablet grandi e desktop  */
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+
+    h1 {
+        font-size: 20px;
+    }
+    body {
+        font-size: 0px;
+    }
+    
+    .title {
+        margin-top: -10px;
+        margin-left: 60px;
+        background-color: rgb(10, 156, 200);
+        width: 910px;
+        height: 300px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-align: left;
+        vertical-align: top;
+        background-image: url('../Images/covid_background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .title p {
+        padding-top: 220px;
+        padding-left: 40px;
+        color: white;
+        font-family: 'HelveticaBold';
+        font-size: 38px;
+        outline: none;
+        text-decoration: none;
+    }
+    
+    
+    
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(218, 199, 199);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 40px;
+    }
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      color: black;
+      display: block;
+      transition: 0.3s;
+      width: 230px;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+    
+    .openNav {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 40px;
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        border: 0px;
+        border-color: white;
+        outline: none;
+    }
+    
+    .scheda {
+        width: 120px;
+        height: 220px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: 60px;
+        margin-left: 40px;
+
+        border: 4px;
+        background-color: rgb(231, 214, 214);
+        border-color: black;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: all 0.3s;
+    }
+    .scheda:hover {
+        scale: 1.1;
+    }
+    .scheda img {
+        width: 75px;
+        height: auto;
+        padding: 10px;
+    }
+
+    
+    .scheda p {
+        font-size: 15px;
+        padding: 2px;
+        padding-bottom: 20px;
+        color: black;
+    }
+    
+    .regioni {
+        display: inline-block;
+        width: 350px;
+        height: 100px;
+        margin-top: 100px;
+        margin-left: 350px;
+        font-family: 'Helvetica';
+        font-size: 27px;
+        border-radius: 14px;
+        border-width: 0px;
+        color: black;
+        background-color: rgb(231, 214, 214);
+        border-color: rgb(231, 214, 214);
+        outline: none;
+        cursor: pointer;
+        background-image: linear-gradient(black, black);
+        background-size: 0 5px, auto;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        transition: all .2s ease-out;
+        
+    }
+    
+    .regioni:hover {
+        background-size: 100% 5px, auto;
+    }
+    
+    .fonte-dati {
+        margin-top: 80px;
+        margin-left: 350px;
+    }
+
+    
+
+    .link {
+        margin-left: 100px;
+        margin-top: 30px;
+        width: 800px;
+        height: 100px;
+        padding: 15px;
+        background-color: rgb(0, 69, 121);
+        border-radius: 17px;
+        transition: all 0.2s;
+    }
+    .link:hover {
+        scale: 1.06;
+    }
+    .link img {
+        float: left;
+        width: 110px;
+        height: auto;
+        
+    }
+    .link p {
+        padding-left: 20px;
+        float: left;
+        color: white;
+        font-size: 34px;
+    
+    }
+    
+    .info-sito {
+        margin-left: 430px;
+        margin-top: 50px;
+        font-size: 16px;
+        color: black;
+    }
+    
+}
+
+
+

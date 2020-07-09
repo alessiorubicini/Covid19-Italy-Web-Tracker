@@ -1,0 +1,168 @@
+<html>
+    <head>
+
+        <title>COVID-19 Italy Tracker</title>
+
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <meta property="og:image" content="Images/covid_background.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1600">
+        <meta property="og:image:height" content="900">
+        <meta property="og:title" content="COVID-19 Italy Tracker">
+
+        <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        
+        <link rel="icon" type="image/png" href="Images/coronavirus.png">
+
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+        <link rel="stylesheet" href="CSS/style.css">
+
+    </head>
+
+    <body id="body">
+        
+        
+        <div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="mappa.html">Mappa regioni</a>
+            <a href="datiRegioni.html">Dati regioni</a>
+            <a href="https://www.google.com/search?q=coronavirus&oq=coronavirus&aqs=chrome.0.69i59l4j0j69i61l2j69i60.1109j0j7&sourceid=chrome&ie=UTF-8" target="_blank">Info sul virus</a>
+            <a href="http://www.salute.gov.it/nuovocoronavirus" target="_blank">Ministero</a>
+            <a href="https://news.google.com/topics/CAAqBwgKMPa5lwswluKuAw?hl=it&gl=IT&ceid=IT%3Ait" target="_blank">Ultime notizie</a>
+            <br><br>
+            <a href="../index.html" target="_blank" style="color: yellow;">Creatore del sito</a>
+        </div>
+        
+        <span class="openNav" onclick="openNav()">&#9776;</span>
+        
+        
+        <div class="header">
+            <p>COVID-19 Italy Tracker</p>
+        </div>
+        
+
+
+        <div class="ultimiDati" id="ultimiDati">
+            <h1>Ultimo aggiornamento</h1>
+        </div>
+
+        <div class="dati" id="dati">
+            <div class="scheda positivi" id="scheda">
+                <img src="Images/positivi.png">
+                <p>Positivi</p>
+                <p id="numeroPositivi"></p>
+            </div>
+            <div class="scheda guariti" id="scheda">
+                <img src="Images/guariti.png">
+                <p>Guariti/Dimessi</p>
+                <p id="numeroGuariti"></p>
+            </div>
+            <div class="scheda morti" id="scheda">
+                <img src="Images/morti.png">
+                <p>Deceduti</p>
+                <p id="numeroDeceduti"></p><!-- 
+                -->
+            </div>
+            <div class="scheda terapia" id="scheda">
+                <img src="Images/terapia.png">
+                <p>Terapia<br>intensiva</p>
+                <p id="terapiaIntensiva"></p>
+            </div><!--
+            -->
+            <div class="scheda tamponi" id="scheda">
+                <img src="Images/tampone.png">
+                <p>Tamponi effettuati</p>
+                <p id="tamponi"></p>
+            </div> <!--
+            -->
+            <div class="scheda casi" id="scheda">
+                <img src="Images/casitotali.png">
+                <p>Casi totali</p>
+                <p id="casiTotali"></p>
+            </div>
+        </div>
+
+        
+        <div class="regioni-dati">
+            <a href="mappa.html">
+                <button class="regioni-btn" id="mappa-regioni" style="background-image: url('./Images/italy_map.png');">MAPPA REGIONI</button>
+            </a>
+
+            <a href="datiRegioni.html">
+                <button class="regioni-btn" id="dati-regioni" style="background-image: url('./Images/covid_background.png');">DATI REGIONI</button>
+            </a>
+        </div>
+        
+
+        <div class="grafici">
+
+            <div class="andamento" id="andamento-contagi"></div>
+
+            <div class="andamento" id="andamento-guariti"></div>
+
+            <div class="andamento" id="andamento-morti"></div>
+
+            <div class="andamento" id="andamento-terapie"></div>
+        </div>
+        
+
+
+        <div class="link-utili">
+
+            
+            <a href="https://www.google.com/search?q=coronavirus&oq=coronavirus&aqs=chrome.0.69i59l4j0j69i61l2j69i60.1109j0j7&sourceid=chrome&ie=UTF-8" target="_blank">        
+                <button class="link-btn" style="background-image: url('./Images/googleLogo.png');">Informazioni sul virus</button>                    
+            </a>
+            
+            
+            <a href="https://google.com/covid19-map/?hl=it" target="_blank">        
+                <button class="link-btn" style="background-image: url('./Images/googleLogo.png');">Mappa mondiale</button>
+                    
+            </a>
+            
+
+        
+            <a href="http://www.salute.gov.it/nuovocoronavirus" target="_blank">    
+                <button class="link-btn" style="background-image: url('./Images/ministero.png');">Ministero della salute</button>
+            </a>
+            
+
+        </div>
+
+        <p class="info-sito">COVID-19 Italy Tracker<br>© Copyright 2020<br>Sito sviluppato da Alessio Rubicini</p>
+
+        <script type="text/babel" src="Script/datiNazionali.js"></script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="Script/Grafici/andamento_positivi.js"></script>
+        <script type="text/javascript" src="Script/Grafici/andamento_guariti.js"></script>
+        <script type="text/javascript" src="Script/Grafici/andamento_morti.js"></script>
+        <script type="text/javascript" src="Script/Grafici/andamento_terapie.js"></script>
+        
+        
+
+
+        <script>
+			function openNav() {
+              document.getElementById("mySidenav").style.width = "330px";
+			}
+			
+			function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+            
+        </script>
+        
+
+    </body>
+</html>
